@@ -1,0 +1,70 @@
+---
+title: 'Welcome to My Blog'
+date: '2025-10-03'
+description: 'My first blog post using MDX with React components'
+tags: ['blog', 'mdx', 'react', 'typescript']
+author: 'Jason'
+featured: true
+draft: false
+---
+
+import { BlogPostLayout } from '../../components/BlogPostLayout';
+import { Alert, Button, Box } from '@mui/material';
+
+export default function BlogPost({ children }) {
+  return <BlogPostLayout {...frontmatter}>{children}</BlogPostLayout>;
+}
+
+# Welcome to My Personal Blog!
+
+This is my **first blog post** using MDX, which allows me to combine Markdown with React components. Pretty cool, right?
+
+## What is MDX?
+
+MDX is a format that lets you seamlessly write JSX in your Markdown documents. This means you can:
+
+- Write normal Markdown content
+- Import and use React components
+- Create interactive content
+- Style everything with Material-UI
+
+## Interactive Example
+
+Here's a Material-UI Alert component right in my blog post:
+
+<Alert severity='success' sx={{ my: 2 }}>
+  This is a React component rendered inside my MDX blog post!
+</Alert>
+
+And here's a button that actually works:
+
+<Box sx={{ my: 2 }}>
+  <Button variant='contained' onClick={() => alert('Hello from MDX!')}>
+    Click me!
+  </Button>
+</Box>
+
+## Code Examples
+
+You can still write code blocks normally:
+
+```typescript
+const greeting = (name: string) => {
+  return `Hello, ${name}!`;
+};
+
+console.log(greeting('World'));
+```
+
+## What's Next?
+
+I'm planning to write about:
+
+1. **React Development** - Tips and tricks
+2. **TypeScript** - Advanced patterns
+3. **Web Performance** - Optimization techniques
+4. **Personal Projects** - What I'm building
+
+> This blog is built with Vite, React, TypeScript, Material-UI, and MDX. The perfect stack for a modern developer blog!
+
+Thanks for reading! 🚀

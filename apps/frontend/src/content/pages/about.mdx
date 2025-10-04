@@ -1,0 +1,55 @@
+---
+title: 'About Me'
+description: 'Learn more about Jason and this website'
+---
+
+import { BlogPostLayout } from '../../components/BlogPostLayout';
+import { Card, CardContent, Typography, Box, Avatar } from '@mui/material';
+
+export default function AboutPage({ children }) {
+  return (
+    <BlogPostLayout title={frontmatter.title} date='' description={frontmatter.description}>
+      {children}
+    </BlogPostLayout>
+  );
+}
+
+# About Me
+
+<Card sx={{ my: 3, p: 2 }}>
+  <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+    <Avatar sx={{ width: 80, height: 80 }}>J</Avatar>
+    <Box>
+      <Typography variant='h5'>Jason</Typography>
+      <Typography variant='body2' color='text.secondary'>
+        Developer, Creator, Problem Solver
+      </Typography>
+    </Box>
+  </CardContent>
+</Card>
+
+## Hi there! 👋
+
+Welcome to my personal website. I'm a developer passionate about creating amazing web experiences with modern technologies.
+
+## What I Do
+
+- **Frontend Development** - React, TypeScript, Material-UI
+- **Backend Development** - Node.js, Python, APIs
+- **Web Performance** - Optimization and best practices
+- **Open Source** - Contributing to the community
+
+## Technologies I Love
+
+- **React & TypeScript** - For building robust UIs
+- **Material-UI** - For beautiful, accessible components
+- **Vite** - For lightning-fast development
+- **MDX** - For content with interactivity
+
+## Get In Touch
+
+Feel free to reach out if you want to collaborate on projects, discuss technology, or just say hello!
+
+---
+
+_This website is built with React, TypeScript, Vite, and MDX._
